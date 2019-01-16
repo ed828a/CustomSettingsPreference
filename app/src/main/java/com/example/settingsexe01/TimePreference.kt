@@ -25,10 +25,10 @@ class TimePreference @JvmOverloads constructor(
         }
     private val mDialogLayoutResId = R.layout.pref_dialog_time
 
-    override fun onGetDefaultValue(a: TypedArray, index: Int): Any {
+    override fun onGetDefaultValue(array: TypedArray, index: Int): Any {
         // The type of this preference is Int, so we read the default value from the attributes
         // as Int. Fallback value is set to 0.
-        return a.getInt(index, 0)
+        return array.getInt(index, 0)
     }
 
     override fun onSetInitialValue(restorePersistedValue: Boolean, defaultValue: Any?) {

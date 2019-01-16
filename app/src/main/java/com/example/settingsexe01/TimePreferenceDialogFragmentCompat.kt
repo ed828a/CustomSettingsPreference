@@ -1,7 +1,6 @@
 package com.example.settingsexe01
 
 import android.os.Bundle
-import android.support.v7.preference.DialogPreference
 import android.support.v7.preference.PreferenceDialogFragmentCompat
 import android.text.format.DateFormat
 import android.view.View
@@ -56,11 +55,10 @@ class TimePreferenceDialogFragmentCompat : PreferenceDialogFragmentCompat() {
             // Get the related Preference and save the value
             val preference = preference
             if (preference is TimePreference) {
-                val timePreference = preference
                 // This allows the client to ignore the user value.
-                if (timePreference.callChangeListener(minutesAfterMidnight)) {
+                if (preference.callChangeListener(minutesAfterMidnight)) {
                     // Save the value
-                    timePreference.time = minutesAfterMidnight
+                    preference.time = minutesAfterMidnight
                 }
             }
         }
