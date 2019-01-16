@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SettingsExe01</string>
+    <string name="btn_custom">Button in custom layout</string>
+</resources>
